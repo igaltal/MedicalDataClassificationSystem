@@ -1,0 +1,13 @@
+import pandas as pd
+
+class DataLoader:
+    def __init__(self, file_path):
+        self.file_path = file_path
+
+    def load_data(self):
+        return pd.read_csv(self.file_path)
+
+    def preprocess_data(self, data):
+        # Example preprocessing steps
+        data = data.dropna()  # Drop missing values
+        return data
